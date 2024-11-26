@@ -28,6 +28,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+.ativo {
+    font-weight: bold;
+}
+
 h2 {
     color: #35424a;
 }
