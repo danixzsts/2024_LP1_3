@@ -13,6 +13,22 @@ header {
     text-align: center;
 }
 
+.sub-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Overlay */
+    url('Imagens/arpanet.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 140px;
+}
+
+.sub-header h1{ 
+    color: white;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
