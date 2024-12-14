@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 body {
@@ -22,14 +22,14 @@ header {
     align-items: center;
     justify-content: center;
     opacity: 80%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Overlay */
-    url('Imagens/arpanet.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('Imagens/arpanet.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 140px;
 }
 
-.sub-header h1{ 
+.sub-header h1 {
     color: white;
 }
 
@@ -46,6 +46,7 @@ nav ul li {
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    text-wrap: nowrap;
 }
 
 .ativo {
@@ -64,7 +65,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.listaBrowsers{
+.listaBrowsers {
     width: 90%;
     max-width: 1536px;
     margin-inline: auto;
@@ -72,13 +73,11 @@ main {
     height: 100px;
     margin-top: 5rem;
     overflow: hidden;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1) 20%,
-        rgba(0,0,0,1) 80%,
-        rgba(0,0,0,0)
-    );
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
 }
 
 @keyframes scrollLeft {
@@ -87,7 +86,7 @@ main {
     }
 }
 
-.item{
+.item {
     width: 200px;
     height: 100px;
     border-radius: 6px;
@@ -99,30 +98,36 @@ main {
     animation-iteration-count: infinite;
 }
 
-.item img{
+.item img {
     width: 100px;
     height: 100px;
 }
 
-.item1{
+.item1 {
     animation-delay: calc(30s / 7 * (7 - 1) * -1);
 }
-.item2{
+
+.item2 {
     animation-delay: calc(30s / 7 * (7 - 2) * -1);
 }
-.item3{
+
+.item3 {
     animation-delay: calc(30s / 7 * (7 - 3) * -1);
 }
-.item4{
+
+.item4 {
     animation-delay: calc(30s / 7 * (7 - 4) * -1);
 }
-.item5{
+
+.item5 {
     animation-delay: calc(30s / 7 * (7 - 5) * -1);
 }
-.item6{
+
+.item6 {
     animation-delay: calc(30s / 7 * (7 - 6) * -1);
 }
-.item7{
+
+.item7 {
     animation-delay: calc(30s / 7 * (7 - 7) * -1);
 }
 
@@ -132,22 +137,36 @@ main {
     gap: 32px;
 }
 
-.content-container img{
+.browser-entry {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (max-width: 576px) { /* breakpoint típico para dispositivos pequenos */
+    .browser-entry {
+        flex-wrap: wrap;
+    }
+
+    .browser-entry .browser-logo {
+        margin: auto;
+    }
+}
+
+.browser-entry:nth-child(4n-1) { /* Seleciona cada terceiro item na lista de entradas do navegador; regra tem de ser assim porque hr conta como um item */
+    flex-direction: row-reverse; /* Inverte a ordem dos itens (coloca o logo à direita) */
+}
+
+.browser-entry .browser-logo {
     width: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
-.image-left {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    gap: 15px;
-}
-
-.image-right {
-    display: flex;
-    align-items: center;
-    
-    gap: 15px   ;
+.browser-entry .browser-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 footer {
@@ -160,34 +179,36 @@ footer {
     width: 100%;
 }
 
-
 hr {
-    width: 20%;
-    border: 0.2px solid rgb(187, 187, 187) ;
+    width: 100%;
+    max-width: 350px;
+    border: 0.2px solid rgb(187, 187, 187);
 }
-
 
 .slider {
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 80%;
-
     width: 100%;
-    height: 550px;
+    height: 400px;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), /* Overlay */
-    url('Imagens/slider.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        /* Overlay */
+        url('Imagens/slider.png');
     background-repeat: repeat;
     background-size: contain;
+    background-position: center;
 }
 
 .slider h1 {
     background-color: black;
     padding: 15px;
-    box-shadow: #35424a 10px 10px ;
+    box-shadow: #35424a 10px 10px;
 }
 
-
-
-
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
