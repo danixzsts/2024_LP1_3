@@ -36,17 +36,16 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    text-wrap: nowrap;
 }
 
 .ativo {
@@ -131,12 +130,6 @@ main {
     animation-delay: calc(30s / 7 * (7 - 7) * -1);
 }
 
-.content-container {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-
 .browser-entry {
     display: flex;
     align-items: center;
@@ -159,6 +152,7 @@ main {
 
 .browser-entry .browser-logo {
     width: 200px;
+    height: 200px;
     flex-shrink: 0;
 }
 
@@ -173,8 +167,6 @@ footer {
     padding: 10px 0;
     background: #35424a;
     color: #ffffff;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
@@ -184,7 +176,7 @@ hr {
     border: 0.2px solid rgb(187, 187, 187);
 }
 
-.slider {
+.banner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,14 +185,13 @@ hr {
     height: 400px;
     color: white;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        /* Overlay */
         url('Imagens/slider.png');
     background-repeat: repeat;
     background-size: contain;
     background-position: center;
 }
 
-.slider h1 {
+.banner h1 {
     background-color: black;
     padding: 15px;
     box-shadow: #35424a 10px 10px;
