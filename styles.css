@@ -153,13 +153,12 @@ main {
     }
 }
 
-.browser-entry:nth-child(4n-1) { /* Seleciona cada terceiro item na lista de entradas do navegador; regra tem de ser assim porque hr conta como um item */
-    flex-direction: row-reverse; /* Inverte a ordem dos itens (coloca o logo à direita) */
+.browser-entry:nth-child(4n-1) { /* Seleciona os elementos "pares"; regra tem de ser assim porque hr conta como um item */
+    flex-direction: row-reverse; /* Inverte a ordem dos itens (coloca o logo à esquerda) */
 }
 
 .browser-entry .browser-logo {
     width: 200px;
-    overflow: hidden;
     flex-shrink: 0;
 }
 
