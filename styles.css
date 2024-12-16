@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Garante que o padding e a border sejam incluídos no tamanho total dos elementos */
 }
 
 body {
@@ -18,14 +18,14 @@ header {
 }
 
 .sub-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Organiza os elementos num layout flexível */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
     opacity: 80%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url('Imagens/arpanet.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+        url('Imagens/arpanet.jpeg'); /* Combina um gradiente com uma imagem de fundo */
+    background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra todo o elemento */
     height: 140px;
 }
 
@@ -34,18 +34,18 @@ header {
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0; /* Remove o espaço interno ao redor dos itens */
+    display: flex; /* Cria um layout flexível para a navegação */
+    gap: 30px; /* Define o espaçamento entre os itens da lista */
+    justify-content: center; /* Centraliza os itens na horizontal */
+    flex-wrap: wrap; /* Permite que os itens "quebrem" para uma nova linha, se necessário */
     margin: 0 20px;
 }
 
 nav ul li a {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 .ativo {
@@ -60,41 +60,41 @@ main {
     padding: 20px;
     margin: 20px;
     background: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Adiciona cantos arredondados ao contêiner principal */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cria uma sombra leve ao redor do contêiner */
 }
 
 .listaBrowsers {
     width: 90%;
     max-width: 1536px;
-    margin-inline: auto;
+    margin-inline: auto; /* Centraliza o contêiner horizontalmente */
     position: relative;
     height: 100px;
     margin-top: 5rem;
-    overflow: hidden;
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
     mask-image: linear-gradient(to right,
             rgba(0, 0, 0, 0),
             rgba(0, 0, 0, 1) 20%,
             rgba(0, 0, 0, 1) 80%,
-            rgba(0, 0, 0, 0));
+            rgba(0, 0, 0, 0)); /* Cria um efeito nas extremidades */
 }
 
 @keyframes scrollLeft {
     to {
-        left: -200px;
+        left: -200px; /* Define o ponto final da animação, movendo os itens para a esquerda */
     }
 }
 
 .item {
     width: 200px;
     height: 100px;
-    border-radius: 6px;
-    position: absolute;
-    left: max(calc(200px * 5), 100%);
-    animation-name: scrollLeft;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    border-radius: 6px; /* Arredonda os cantos dos elementos */
+    position: absolute; /* Define a posição do elemento em relação ao contêiner pai */
+    left: max(calc(200px * 7), 100%); /* Calcula a posição inicial fora da tela */
+    animation-name: scrollLeft; /* Aplica a animação "scrollLeft" ao elemento */
+    animation-duration: 30s; /* Define a duração total da animação */
+    animation-timing-function: linear; /* Garante que a animação tenha um movimento constante */
+    animation-iteration-count: infinite; /* Faz a animação repetir indefinidamente */
 }
 
 .item img {
@@ -103,7 +103,7 @@ main {
 }
 
 .item1 {
-    animation-delay: calc(30s / 7 * (7 - 1) * -1);
+    animation-delay: calc(30s / 7 * (7 - 1) * -1); /* Define atrasos entre os itens para sincronizar o movimento */
 }
 
 .item2 {
@@ -131,35 +131,35 @@ main {
 }
 
 .browser-entry {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    display: flex; /* Organiza os elementos de cada entrada num layout flexível */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 16px; /* Define o espaçamento entre os itens */
 }
 
-@media (max-width: 576px) { /* breakpoint típico para dispositivos pequenos */
+@media (max-width: 576px) { /* Aplica regras específicas para ecrãs pequenos */
     .browser-entry {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Permite que os itens passem para uma nova linha */
     }
 
     .browser-entry .browser-logo {
-        margin: auto;
+        margin: auto; /* Centraliza o logo no layout flexível */
     }
 }
 
-.browser-entry:nth-child(4n-1) { /* Seleciona os elementos "pares"; regra tem de ser assim porque hr conta como um item */
-    flex-direction: row-reverse; /* Inverte a ordem dos itens (coloca o logo à esquerda) */
+.browser-entry:nth-child(4n-1) { /* Seleciona determinados itens (baseado na posição na lista) */
+    flex-direction: row-reverse; /* Inverte a ordem dos itens dentro do contêiner */
 }
 
 .browser-entry .browser-logo {
     width: 200px;
     height: 200px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Impede que o logo seja redimensionado */
 }
 
 .browser-entry .browser-logo img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* Mantém as proporções das imagens sem cortes */
 }
 
 footer {
@@ -172,33 +172,33 @@ footer {
 
 hr {
     width: 100%;
-    max-width: 350px;
+    max-width: 350px; /* Limita a largura máxima da linha horizontal */
     border: 0.2px solid rgb(187, 187, 187);
 }
 
 .banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Cria um layout flexível para centralizar os conteúdos */
+    align-items: center; /* Alinha verticalmente os conteúdos no centro */
+    justify-content: center; /* Alinha horizontalmente os conteúdos no centro */
     opacity: 80%;
     width: 100%;
     height: 400px;
     color: white;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url('Imagens/slider.png');
+        url('Imagens/slider.png'); /* Combina gradiente com uma imagem repetitiva */
     background-repeat: repeat;
-    background-size: contain;
+    background-size: contain; /* Ajusta o tamanho da imagem para que ela caiba no elemento */
     background-position: center;
 }
 
 .banner h1 {
-    background-color: black;
+    background-color: black; /* Adiciona fundo ao texto para melhorar a legibilidade */
     padding: 15px;
-    box-shadow: #35424a 10px 10px;
+    box-shadow: #35424a 10px 10px; /* Cria um efeito de sombra no texto */
 }
 
 .article-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: flex; /* Organiza os artigos num layout flexível */
+    flex-direction: column; /* Alinha os artigos verticalmente */
+    gap: 15px; /* Espaçamento entre os artigos */
 }
