@@ -211,7 +211,7 @@ hr {
     margin-right: auto;
 }
 
-@media (max-width: 576px) { /* Aplica regras específicas para ecrãs pequenos */
+@media (max-width: 768px) { /* Aplica regras específicas para ecrãs pequenos */
     .article-list img {
         width: 100%;
         object-fit: contain;
