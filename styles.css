@@ -198,15 +198,25 @@ hr {
 }
 
 .article-list {
-    display: flex; /* Organiza os artigos num layout flexível */
-    flex-direction: column; /* Alinha os artigos verticalmente */
-    gap: 15px; /* Espaçamento entre os artigos */
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px;
 }
 
 .article-list img {
     width: 50%;
-    object-fit: contain; /* Mantém as proporções das imagens sem cortes */
-    display: block; /* Permite centrar a imagem */
-    margin-left: auto; /* Permite centrar a imagem */
-    margin-right: auto; /* Permite centrar a imagem */
+    object-fit: contain;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+@media (max-width: 576px) { /* Aplica regras específicas para ecrãs pequenos */
+    .article-list img {
+        width: 100%;
+        object-fit: contain;
+        display: block;
+        margin-left: auto; 
+        margin-right: auto;
+    }
 }
